@@ -1,0 +1,29 @@
+[user]
+  email = mistyfiky@gmail.com
+  name = Jan Malisz
+[core]
+  excludesfile = ~/.gitignore_global
+	editor = vim
+[alias]
+  a = add
+  aa = add .
+  br = branch
+  cane = commit --amend --no-edit
+  c = commit
+  ch = checkout
+  cl = clone
+  cm = commit -m
+  co = checkout
+  d = diff
+  last = log -1 HEAD
+  l = log --oneline -n 10
+  p = pull
+  ph = push
+  phu = "!git push -u origin $(git rev-parse --abbrev-ref HEAD)"
+  pr = pull --rebase
+  pt = push --tags
+  rh = reset --hard
+  s = status
+  sm = submodule
+  sh = stash
+  t = tag

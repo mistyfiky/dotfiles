@@ -1,0 +1,19 @@
+#!/usr/bin/env zsh
+
+if [ "-h" = "${1}" ] || [ "--help" = "${1}" ]
+then
+    >&2 cat <<EOT
+Usage: gtypist-fmt [FILE]
+Format plain text from FILE or standard input to gtypist lesson format.
+
+  -h, --help display this help and exit
+EOT
+    exit
+fi
+
+local line
+while read line
+do
+    echo "${line}" | fmt -w78 | sed -e '/^\s*$/d' -e '1s/^/S:/' -e '2,$s/^/ :/'
+done < "${1:-/dev/stdin}"
+

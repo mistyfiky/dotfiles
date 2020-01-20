@@ -1,0 +1,20 @@
+# dotfiles
+alias dotfiles='/usr/bin/git --git-dir="${HOME}/.dotfiles" --work-tree="${HOME}"'
+
+# shortcuts
+alias\
+ cds='cd "${ABS_SRC}"'\
+ cdv='cd "${ABS_VCS}"'\
+ c='composer'\
+ d='docker'\
+ dc='docker-compose'\
+ dcdev='docker-compose -f docker-compose.yml -f docker-compose.dev.yml'\
+ dcpro='docker-compose -f docker-compose.yml -f docker-compose.pro.yml'\
+ g='git'\
+ m='make'\
+ p='php'\
+ v='vim'\
+
+# misc
+alias hibernate='sudo systemctl hibernate'
+
