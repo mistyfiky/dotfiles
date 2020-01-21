@@ -1,0 +1,25 @@
+#!/usr/bin/env zsh
+
+if [ "-h" = "${1}" ] || [ "--help" = "${1}" ]
+then
+    >&2 cat <<EOT
+Usage: chphp [VERSION]
+Change system defaulta php version.
+
+  -h, --help display this help and exit
+EOT
+    exit
+fi
+
+local ver=${1}
+if [ -z "${ver}" ] || [ ! -x "/usr/bin/php${ver}" ]
+then
+    >&2 echo "invalid php version ${ver}"
+    exit 1
+fi
+
+sudo update-alternatives --set php "/usr/bin/php${ver}"
+sudo update-alternatives --set phar "/usr/bin/phar${ver}"
+sudo update-alternatives --set phar.phar "/usr/bin/phar.phar${ver}"
+php -v
+
