@@ -26,5 +26,9 @@ gsettings set org.gnome.settings-daemon.plugins.media-keys custom-keybindings "[
 gsettings set org.gnome.Terminal.Legacy.Settings default-show-menubar false
 # keyboard layout
 gsettings set org.gnome.desktop.input-sources sources "[('xkb', 'pl')]"
+# power settings
+gsettings set org.gnome.settings-daemon.plugins.power power-button-action 'nothing'
+gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type 'nothing'
+gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-battery-type 'nothing'
 # local settings
 [ -f "${HOME}/.gnomerc.local" ] && . "${HOME}/.gnomerc.local"

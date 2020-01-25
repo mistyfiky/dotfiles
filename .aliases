@@ -15,3 +15,7 @@ alias\
  p='php'\
  v='vim'\
 
+# misc
+alias\
+ hibernate='sudo systemctl hibernate'
+
