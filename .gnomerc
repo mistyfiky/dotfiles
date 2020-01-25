@@ -18,9 +18,13 @@ gsettings set org.gnome.shell favorite-apps "['firefox-esr.desktop', 'org.gnome.
 gsettings set org.gnome.settings-daemon.plugins.media-keys screensaver '<Alt><Super>l'
 gsettings set org.gnome.desktop.notifications show-in-lock-screen false
 # terminal shortcut
-gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ name Terminal
-gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ command gnome-terminal
+gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ name 'Terminal'
+gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ command 'gnome-terminal'
 gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ binding '<Super>Return'
+gsettings set org.gnome.settings-daemon.plugins.media-keys custom-keybindings "['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/']"
 # terminal config
 gsettings set org.gnome.Terminal.Legacy.Settings default-show-menubar false
-
+# keyboard layout
+gsettings set org.gnome.desktop.input-sources sources "[('xkb', 'pl')]"
+# local settings
+[ -f "${HOME}/.gnomerc.local" ] && . "${HOME}/.gnomerc.local"
