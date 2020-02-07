@@ -32,5 +32,8 @@ gsettings set org.gnome.desktop.input-sources sources "[('xkb', 'pl')]"
 gsettings set org.gnome.settings-daemon.plugins.power power-button-action 'nothing'
 gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type 'nothing'
 gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-battery-type 'nothing'
+# no automatic updates
+gsettings set org.gnome.software download-updates false
+gsettings set org.gnome.software download-updates-notify false
 # local settings
 [ -f "${HOME}/.gnomerc.local" ] && . "${HOME}/.gnomerc.local"
