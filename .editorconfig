@@ -11,5 +11,5 @@ indent_size = 4
 [{Makefile,*.go}]
 indent_style = tab
 
-[{*.gitconfig,*.yml,*.md}]
+[{*.gitconfig,*.yml}]
 indent_size = 2
