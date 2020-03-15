@@ -19,3 +19,6 @@ path+=("${GOROOT}/bin")
 
 # nvm
 export NVM_DIR="$HOME/.nvm"
+
+# local
+[ -f "${HOME}/.zshenv.local" ] && . "${HOME}/.zshenv.local"
