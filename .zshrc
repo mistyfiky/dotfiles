@@ -10,3 +10,6 @@ source "${HOME}/.aliases"
 
 # nvm
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+
+# local
+[ -f "${HOME}/.zshrc.local" ] && . "${HOME}/.zshrc.local"
