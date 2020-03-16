@@ -35,5 +35,8 @@ gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-battery-typ
 # no automatic updates
 gsettings set org.gnome.software download-updates false
 gsettings set org.gnome.software download-updates-notify false
+# show hidden files
+gsettings set org.gtk.Settings.FileChooser show-hidden true
+gsettings set org.gnome.nautilus.preferences show-hidden-files true
 # local
 [ -f "${HOME}/.gnomerc.local" ] && . "${HOME}/.gnomerc.local"
