@@ -19,3 +19,5 @@ alias\
 alias\
  hibernate='sudo systemctl hibernate'
 
+# local
+[ -f "${HOME}/.aliases.local" ] && . "${HOME}/.aliases.local"
