@@ -1,10 +1,7 @@
-[user]
-  email = mistyfiky@gmail.com
-  name = Jan Malisz
 [core]
   excludesfile = ~/.gitignore_global
-	editor = vim
-	autocrlf = false
+  editor = vim
+  autocrlf = false
 [alias]
   a = add
   aa = add .
@@ -28,3 +25,5 @@
   sm = submodule
   sh = stash
   t = tag
+[include]
+  path = ~/.gitconfig.local

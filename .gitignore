@@ -1,5 +1,2 @@
 /.dotfiles
-/.aliases.local
-/.gnomerc.local
-/.zshenv.local
-/.zshrc.local
+/.*.local
