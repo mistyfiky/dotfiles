@@ -9,6 +9,7 @@
   cane = commit --amend --no-edit
   c = commit
   ch = checkout
+  chb = checkout -b
   cl = clone
   cm = commit -m
   co = checkout
