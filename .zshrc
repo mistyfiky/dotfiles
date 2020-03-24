@@ -9,7 +9,7 @@ export PROMPT="%B%F{magenta}\$HOST%f%b $PROMPT"
 source "${HOME}/.aliases"
 
 # nvm
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/nvm.sh" ] && source "$NVM_DIR/nvm.sh"
 
 # local
-[ -f "${HOME}/.zshrc.local" ] && . "${HOME}/.zshrc.local"
+[ -f "${HOME}/.zshrc.local" ] && source "${HOME}/.zshrc.local"

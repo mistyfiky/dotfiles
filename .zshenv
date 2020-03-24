@@ -24,4 +24,4 @@ export NVM_DIR="$HOME/.nvm"
 path+=("${HOME}/.symfony/bin")
 
 # local
-[ -f "${HOME}/.zshenv.local" ] && . "${HOME}/.zshenv.local"
+[ -f "${HOME}/.zshenv.local" ] && source "${HOME}/.zshenv.local"

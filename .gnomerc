@@ -50,4 +50,4 @@ gsettings set org.gtk.Settings.FileChooser show-hidden true
 gsettings set org.gnome.nautilus.preferences show-hidden-files true
 
 # local
-[ -f "${HOME}/.gnomerc.local" ] && . "${HOME}/.gnomerc.local"
+[ -f "${HOME}/.gnomerc.local" ] && source "${HOME}/.gnomerc.local"
