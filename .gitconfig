@@ -14,8 +14,11 @@
   cm = commit -m
   co = checkout
   d = diff
+  do = diff origin
   last = log -1 HEAD
   l = log --oneline -n 10
+  m = merge
+  ms = merge --squash
   p = pull
   ph = push
   phu = "!git push -u origin $(git rev-parse --abbrev-ref HEAD)"
