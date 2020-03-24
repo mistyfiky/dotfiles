@@ -1,6 +1,7 @@
 # dark theme
 gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark'
 gsettings set org.gnome.desktop.wm.preferences theme 'Adwaita-dark'
+
 # background
 gsettings set org.gnome.desktop.background color-shading-type 'solid'
 gsettings set org.gnome.desktop.background picture-options 'wallpaper'
@@ -12,31 +13,41 @@ gsettings set org.gnome.desktop.screensaver picture-options 'wallpaper'
 gsettings set org.gnome.desktop.screensaver picture-uri ''
 gsettings set org.gnome.desktop.screensaver primary-color '#000000'
 gsettings set org.gnome.desktop.screensaver secondary-color '#000000'
+
 # favourite apps
 gsettings set org.gnome.shell favorite-apps "['firefox-esr.desktop', 'org.gnome.Nautilus.desktop', 'org.gnome.Terminal.desktop', 'discord.desktop', 'jetbrains-toolbox.desktop', 'jetbrains-phpstorm.desktop']"
+
 # screen lock
 gsettings set org.gnome.settings-daemon.plugins.media-keys screensaver '<Alt><Super>l'
 gsettings set org.gnome.desktop.notifications show-in-lock-screen false
+
 # terminal shortcut
 gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ name 'Terminal'
 gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ command 'gnome-terminal'
 gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ binding '<Super>Return'
 gsettings set org.gnome.settings-daemon.plugins.media-keys custom-keybindings "['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/']"
+
 # terminal config
 gsettings set org.gnome.Terminal.Legacy.Settings default-show-menubar false
 UUID=$(gsettings get org.gnome.Terminal.ProfilesList default | tr -d \')
 gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:${UUID}/ audible-bell false
+gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:${UUID}/ scrollback-unlimited true
+
 # keyboard layout
 gsettings set org.gnome.desktop.input-sources sources "[('xkb', 'pl')]"
+
 # power settings
 gsettings set org.gnome.settings-daemon.plugins.power power-button-action 'nothing'
 gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type 'nothing'
 gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-battery-type 'nothing'
+
 # no automatic updates
 gsettings set org.gnome.software download-updates false
 gsettings set org.gnome.software download-updates-notify false
+
 # show hidden files
 gsettings set org.gtk.Settings.FileChooser show-hidden true
 gsettings set org.gnome.nautilus.preferences show-hidden-files true
+
 # local
 [ -f "${HOME}/.gnomerc.local" ] && . "${HOME}/.gnomerc.local"
