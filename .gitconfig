@@ -22,9 +22,10 @@
   p = pull
   ph = push
   phu = "!git push -u origin $(git rev-parse --abbrev-ref HEAD)"
+  pht = push --tags
   pr = pull --rebase
-  pt = push --tags
-  rh = reset --hard
+  rs = reset
+  rsh = reset --hard
   s = status
   sm = submodule
   sh = stash
