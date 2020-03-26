@@ -1,0 +1,17 @@
+#!/usr/bin/env zsh
+
+if [ "-h" = "${1}" ] || [ "--help" = "${1}" ]; then
+    >&2 cat <<EOT
+Usage: pulse-restart
+Restart pulseaudio service and clear its sound outputs.
+
+  -h, --help display this help and exit
+EOT
+    exit
+fi
+
+# https://wiki.debian.org/PulseAudio#line-79
+rm -r ~/.config/pulse /tmp/pulse-*
+pulseaudio --kill
+pulseaudio --start
+
