@@ -6,8 +6,9 @@
   a = add
   aa = add .
   br = branch
-  cane = commit --amend --no-edit
   c = commit
+  ca = commit --amend
+  cane = commit --amend --no-edit
   ch = checkout
   chb = checkout -b
   cl = clone
