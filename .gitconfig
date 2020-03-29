@@ -29,5 +29,7 @@
   s = status
   sm = submodule
   sh = stash
+  tg = tag
+  tgl = tag --list
 [include]
   path = ~/.gitconfig.local
