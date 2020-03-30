@@ -1,6 +1,7 @@
 # mistyfiky's dotfiles
 
 ## installation
+[basics](https://github.com/mistyfiky/dotfiles/wiki#basics), [local](https://github.com/mistyfiky/dotfiles/wiki#local)
 ```shell script
 git clone --bare https://github.com/mistyfiky/dotfiles.git "${HOME}/.dotfiles"
 alias dotfiles='/usr/bin/git --git-dir="${HOME}/.dotfiles" --work-tree="${HOME}"'
