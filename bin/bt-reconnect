@@ -1,0 +1,12 @@
+#!/usr/bin/env zsh
+
+DEV=${1?}
+
+bluetoothctl remove $DEV
+bluetoothctl --timeout 10 scan on
+bluetoothctl scan off
+bluetoothctl info $DEV || exit 1
+bluetoothctl pair $DEV
+bluetoothctl trust $DEV
+bluetoothctl connect $DEV
+
