@@ -2,6 +2,7 @@
 
 DEV=${1?}
 
+systemctl restart bluetooth
 bluetoothctl remove $DEV
 bluetoothctl --timeout 10 scan on
 bluetoothctl scan off
