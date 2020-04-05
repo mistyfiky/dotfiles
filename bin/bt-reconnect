@@ -2,12 +2,28 @@
 
 DEV=${1?}
 
-systemctl restart bluetooth
-bluetoothctl remove $DEV
-bluetoothctl --timeout 10 scan on
-bluetoothctl scan off
-bluetoothctl info $DEV || exit 1
-bluetoothctl pair $DEV
-bluetoothctl trust $DEV
-bluetoothctl connect $DEV
+alias btctl='>/dev/null bluetoothctl'
+
+printf '[....] restarting bluetooth\r['\
+ && systemctl restart bluetooth\
+ && sleep 3\
+ && printf 'DONE\n'\
+ || ! printf 'FAIL\n'\
+ || exit 1
+
+printf '[....] removing device\r['\
+ && btctl info $DEV\
+ && btctl remove $DEV\
+ && printf 'DONE\n'\
+ || printf 'SKIP\n'
+
+printf '[....] reconnecting to device\r['\
+ && btctl --timeout 10 scan on\
+ && btctl info $DEV\
+ && btctl pair $DEV\
+ && btctl trust $DEV\
+ && btctl connect $DEV\
+ && printf 'DONE\n'\
+ || ! printf 'FAIL\n'\
+ || exit 1
 
