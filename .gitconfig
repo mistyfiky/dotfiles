@@ -12,6 +12,7 @@
   cmm = commit -m
   ch = checkout
   chb = checkout -b
+  chm = chackout master
   cl = clone
   d = diff
   do = diff origin
