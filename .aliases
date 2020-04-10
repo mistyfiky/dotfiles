@@ -17,7 +17,8 @@ alias\
 
 # misc
 alias\
- hibernate='sudo systemctl hibernate'
+ bt='bluetoothctl'\
+ hibernate='systemctl hibernate &! exit'\
 
 # local
 [ -f "${HOME}/.aliases.local" ] && source "${HOME}/.aliases.local"

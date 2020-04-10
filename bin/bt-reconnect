@@ -1,29 +1,43 @@
 #!/usr/bin/env zsh
 
-DEV=${1?}
+local name=${1?}
+local dev
 
-alias btctl='>/dev/null bluetoothctl'
+alias p='>&2 printf'
+alias bt='bluetoothctl'
+alias bts='>/dev/null bt'
 
-printf '[....] restarting bluetooth\r['\
+    p '[....] restarting bluetooth\r['\
  && systemctl restart bluetooth\
- && sleep 3\
- && printf 'DONE\n'\
- || ! printf 'FAIL\n'\
+ && sleep 1\
+ && p 'DONE\n'\
+ || ! p 'FAIL\n'\
  || exit 1
 
-printf '[....] removing device\r['\
- && btctl info $DEV\
- && btctl remove $DEV\
- && printf 'DONE\n'\
- || printf 'SKIP\n'
+    p '[....] searching device\r['\
+ && dev="$(bt devices | grep "${name}" | cut -d' ' -f2)"\
+ && [ -n "${dev}" ]\
+ && p 'DONE\n'\
+ || p 'SKIP\n'
 
-printf '[....] reconnecting to device\r['\
- && btctl --timeout 10 scan on\
- && btctl info $DEV\
- && btctl pair $DEV\
- && btctl trust $DEV\
- && btctl connect $DEV\
- && printf 'DONE\n'\
- || ! printf 'FAIL\n'\
+    p '[....] removing device\r['\
+ && [ -n "${dev}" ]\
+ && bts remove "${dev}"\
+ && p 'DONE\n'\
+ || p 'SKIP\n'
+
+    p '[....] scanning devices\r['\
+ && dev="$(bt --timeout 20 scan on | grep "${name}" | cut -d' ' -f3)"\
+ && [ -n "${dev}" ]\
+ && p 'DONE\n'\
+ || ! p 'FAIL\n'\
+ || exit 1
+
+    p '[....] reconnecting to device\r['\
+ && bts pair "${dev}"\
+ && bts trust "${dev}"\
+ && bts connect "${dev}"\
+ && p 'DONE\n'\
+ || ! p 'FAIL\n'\
  || exit 1
 
