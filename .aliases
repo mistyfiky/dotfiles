@@ -21,6 +21,7 @@ alias\
 alias\
  bt='bluetoothctl'\
  hibernate='systemctl hibernate &! exit'\
+ myip='curl ifconfig.me'\
  ssu='sudo su --login'\
 
 # local
