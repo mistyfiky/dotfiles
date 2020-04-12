@@ -25,3 +25,7 @@ alias\
 
 # local
 [ -f "${HOME}/.aliases.local" ] && source "${HOME}/.aliases.local"
+
+# private
+[ -f "${HOME}/.aliases.private" ] && source "${HOME}/.aliases.private"
+

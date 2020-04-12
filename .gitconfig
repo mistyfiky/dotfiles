@@ -15,7 +15,7 @@
   chm = checkout master
   cl = clone
   d = diff
-  do = diff origin
+  do = "!git diff origin/$(git rev-parse --abbrev-ref HEAD)"
   last = log -1 HEAD
   l = log --oneline -n 10
   mr = merge
