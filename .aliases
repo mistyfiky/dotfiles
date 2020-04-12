@@ -19,6 +19,7 @@ alias\
 alias\
  bt='bluetoothctl'\
  hibernate='systemctl hibernate &! exit'\
+ ssu='sudo su --login'\
 
 # local
 [ -f "${HOME}/.aliases.local" ] && source "${HOME}/.aliases.local"
