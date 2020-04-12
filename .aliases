@@ -24,8 +24,8 @@ alias\
  ssu='sudo su --login'\
 
 # local
-[ -f "${HOME}/.aliases.local" ] && source "${HOME}/.aliases.local"
+[ -f ~/.aliases.local ] && source ~/.aliases.local
 
 # private
-[ -f "${HOME}/.aliases.private" ] && source "${HOME}/.aliases.private"
+[ -f ~/.aliases.private ] && source ~/.aliases.private
 

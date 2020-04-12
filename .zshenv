@@ -1,8 +1,8 @@
 typeset -U path
 
 # common
-export LC_ALL="en_US.UTF-8"
-export EDITOR="vim"
+export LC_ALL='en_US.UTF-8'
+export EDITOR='vim'
 
 # mine
 path+=("${HOME}/bin")
@@ -14,14 +14,14 @@ export ZSH="${HOME}/.oh-my-zsh"
 
 # go
 export GOROOT="${HOME}/go"
-export GO111MODULE="on"
+export GO111MODULE='on'
 path+=("${GOROOT}/bin")
 
 # nvm
-export NVM_DIR="$HOME/.nvm"
+export NVM_DIR="${HOME}/.nvm"
 
 # symfony
 path+=("${HOME}/.symfony/bin")
 
 # local
-[ -f "${HOME}/.zshenv.local" ] && source "${HOME}/.zshenv.local"
+[ -f ~/.zshenv.local ] && . ~/.zshenv.local

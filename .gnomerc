@@ -54,4 +54,4 @@ gsettings set org.gnome.nautilus.preferences show-hidden-files true
 gsettings set org.gnome.mutter center-new-windows true
 
 # local
-if [ -r ~/.gnomerc.local ]; then . ~/.gnomerc.local; fi
+[ -r ~/.gnomerc.local ] && . ~/.gnomerc.local
