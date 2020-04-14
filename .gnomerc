@@ -53,5 +53,8 @@ gsettings set org.gnome.nautilus.preferences show-hidden-files true
 # center new windows
 gsettings set org.gnome.mutter center-new-windows true
 
+# always swtich window on focus change
+gsettings set org.gnome.desktop.wm.preferences focus-new-windows 'strict'
+
 # local
 [ -r ~/.gnomerc.local ] && . ~/.gnomerc.local
