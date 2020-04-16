@@ -1,0 +1,7 @@
+#!/usr/bin/env zsh
+
+trap 'pkill -P $$' INT TERM EXIT
+while wget -qO- http://10.5.5.9/gp/gpControl/execute\?p1\=gpStream\&c1\=restart >/dev/null; do sleep 2; done &
+>&2 echo "keepalivepid $!"
+ffplay -an -fflags nobuffer -f:v mpegts -probesize 8192 rtp://10.5.5.9:8554
+
