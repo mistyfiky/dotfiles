@@ -22,7 +22,7 @@ alias\
  bt='bluetoothctl'\
  hibernate='systemctl hibernate &! exit'\
  myip='curl ifconfig.me'\
- ssu='sudo su --login'\
+ ssu='ZSH_DISABLE_COMPFIX=true sudo -Es'\
 
 # local
 [ -f ~/.aliases.local ] && source ~/.aliases.local
