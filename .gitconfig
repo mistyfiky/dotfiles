@@ -17,7 +17,7 @@
   d = diff
   do = "!git diff origin/$(git rev-parse --abbrev-ref HEAD)"
   last = log -1 HEAD
-  l = log --oneline -n 10
+  l = log --oneline
   mr = merge
   mrs = merge --squash
   pl = pull
