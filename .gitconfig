@@ -26,6 +26,7 @@
   pht = push --tags
   r = reset
   rh = reset --hard
+  rb = rebase
   rt = remote
   s = status
   sm = submodule
