@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+    command -v rename >/dev/null\
+ || ! echo 'install rename'\
+ || exit 1
+
+: ${1:?}
+
+rename 's|GOPR(\d{4})\.(.*)|${1}00\.${2}|g' "$@"
+rename 's|GP(\d{2})(\d{4})\.(.*)|${2}${1}\.${3}|g' "$@"
