@@ -24,7 +24,7 @@ export NVM_DIR="${HOME}/.nvm"
 path+=("${HOME}/.symfony/bin")
 
 # python
-poth+=("${HOME}/.local/bin")
+path+=("${HOME}/.local/bin")
 
 # local
 [ -f ~/.zshenv.local ] && . ~/.zshenv.local
