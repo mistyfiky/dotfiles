@@ -23,6 +23,7 @@ alias\
  hibernate='systemctl hibernate &! exit'\
  myip='curl ifconfig.me'\
  ssu='ZSH_DISABLE_COMPFIX=true sudo -Es'\
+ tmstp='date +"%s"'\
 
 # local
 [ -f ~/.aliases.local ] && source ~/.aliases.local

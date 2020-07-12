@@ -15,7 +15,7 @@ gsettings set org.gnome.desktop.screensaver primary-color '#000000'
 gsettings set org.gnome.desktop.screensaver secondary-color '#000000'
 
 # favourite apps
-gsettings set org.gnome.shell favorite-apps "['firefox-esr.desktop', 'org.gnome.Terminal.desktop', 'org.gnome.Nautilus.desktop', 'discord.desktop', 'jetbrains-toolbox.desktop', 'jetbrains-phpstorm.desktop', 'gimp.desktop', 'Obsidian.desktop']"
+gsettings set org.gnome.shell favorite-apps "['firefox-esr.desktop', 'org.gnome.Terminal.desktop', 'org.gnome.Nautilus.desktop', 'discord.desktop', 'jetbrains-toolbox.desktop', 'jetbrains-phpstorm.desktop', 'gimp.desktop', 'snap-obsidian_obsidian.desktop']"
 
 # screen lock
 gsettings set org.gnome.settings-daemon.plugins.media-keys screensaver '<Alt><Super>l'
@@ -55,6 +55,9 @@ gsettings set org.gnome.mutter center-new-windows true
 
 # no audible bell
 gsettings set org.gnome.desktop.wm.preferences audible-bell false
+
+# extensions
+gsettings set org.gnome.shell enabled-extensions "['ubuntu-appindicators@ubuntu.com']"
 
 # local
 [ -r ~/.gnomerc.local ] && . ~/.gnomerc.local
