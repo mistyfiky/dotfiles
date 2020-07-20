@@ -15,7 +15,7 @@ alias bts='>/dev/null bt'
  || exit 1
 
     p '[....] searching device\r['\
- && dev="$(bt devices | grep "${name}" | cut -d' ' -f2)"\
+ && dev="$(bt devices | grep "${name}" | head -1 | cut -d' ' -f2)"\
  && [ -n "${dev}" ]\
  && p 'DONE\n'\
  || p 'SKIP\n'
@@ -27,7 +27,7 @@ alias bts='>/dev/null bt'
  || p 'SKIP\n'
 
     p '[....] scanning devices\r['\
- && dev="$(bt --timeout 20 scan on | grep "${name}" | cut -d' ' -f3)"\
+ && dev="$(bt --timeout 30 scan on | grep "${name}" | head -1 | cut -d' ' -f3)"\
  && [ -n "${dev}" ]\
  && p 'DONE\n'\
  || ! p 'FAIL\n'\
