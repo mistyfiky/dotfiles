@@ -20,7 +20,6 @@ alias\
 # misc
 alias\
  bt='bluetoothctl'\
- hibernate='systemctl hibernate &! exit'\
  myip='curl ifconfig.me'\
  ssu='ZSH_DISABLE_COMPFIX=true sudo -Es'\
  tmstp='date +"%s"'\
