@@ -1,3 +1,6 @@
+# zsh
+autoload -U zmv
+
 # oh-my-zsh
 DISABLE_AUTO_UPDATE='true'
 COMPLETION_WAITING_DOTS='true'
