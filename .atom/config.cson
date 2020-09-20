@@ -1,5 +1,8 @@
 "*":
   core:
+    disabledPackages: [
+      "whitespace"
+    ]
     openEmptyEditorOnStart: false
     projectHome: "~/src/github.com"
     telemetryConsent: "no"
@@ -7,3 +10,4 @@
     userId: "632fdcba-1f91-419e-95f4-cd8b0f108069"
   welcome:
     showOnStartup: false
+  whitespace: {}
