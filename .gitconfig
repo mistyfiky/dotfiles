@@ -34,4 +34,6 @@
   t = tag
   tl = tag --list
 [include]
-  path = ~/.gitconfig.local
+  path = ~/.gitconfig.d/local
+[includeIf "gitdir:~/.dotfiles*"]
+	path = ~/.gitconfig.d/dotfiles
