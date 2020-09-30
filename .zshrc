@@ -17,4 +17,4 @@ export KEYTIMEOUT=1
 [ -s "${NVM_DIR}/nvm.sh" ] && . "${NVM_DIR}/nvm.sh"
 
 # custom
-for f in ~/.zshrc.d/*; do . "$f"; done
+[ -n "$(ls ~/.zshrc.d)" ] && for f in ~/.zshrc.d/*; do . "$f"; done || true

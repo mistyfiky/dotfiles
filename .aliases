@@ -25,4 +25,4 @@ alias\
  tmstp='date +"%s"'\
 
  # custom
- for f in ~/.aliases.d/*; do . "$f"; done
+ [ -n "$(ls ~/.aliases.d)" ] && for f in ~/.aliases.d/*; do . "$f"; done || true

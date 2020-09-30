@@ -27,4 +27,4 @@ path+=("${HOME}/.symfony/bin")
 path+=("${HOME}/.local/bin")
 
 # custom
-for f in ~/.zshenv.d/*; do . "$f"; done
+[ -n "$(ls ~/.zshenv.d)" ] && for f in ~/.zshenv.d/*; do . "$f"; done || true
