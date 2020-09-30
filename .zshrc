@@ -16,5 +16,5 @@ export KEYTIMEOUT=1
 # nvm
 [ -s "${NVM_DIR}/nvm.sh" ] && . "${NVM_DIR}/nvm.sh"
 
-# local
-[ -f ~/.zshrc.local ] && . ~/.zshrc.local
+# custom
+for f in ~/.zshrc.d/*; do . "$f"; done

@@ -26,5 +26,5 @@ path+=("${HOME}/.symfony/bin")
 # python
 path+=("${HOME}/.local/bin")
 
-# local
-[ -f ~/.zshenv.local ] && . ~/.zshenv.local
+# custom
+for f in ~/.zshenv.d/*; do . "$f"; done

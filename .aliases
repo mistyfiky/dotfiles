@@ -24,12 +24,5 @@ alias\
  ssu='ZSH_DISABLE_COMPFIX=true sudo -Es'\
  tmstp='date +"%s"'\
 
-# private
-[ -f ~/.aliases.private ] && source ~/.aliases.private
-
-# printbox
-[ -f ~/.aliases.printbox ] &&  source ~/.aliases.printbox
-
-# local
-[ -f ~/.aliases.local ] && source ~/.aliases.local
-
+ # custom
+ for f in ~/.aliases.d/*; do . "$f"; done
