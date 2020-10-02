@@ -24,5 +24,3 @@ alias\
  ssu='ZSH_DISABLE_COMPFIX=true sudo -Es'\
  tmstp='date +"%s"'\
 
-# custom
-[ -n "$(ls ~/.aliases.d)" ] && for f in ~/.aliases.d/*; do . "$f"; done || true

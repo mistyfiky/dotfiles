@@ -1,0 +1,3 @@
+# mass renaming files
+# man zshcontrib
+autoload -U zmv
