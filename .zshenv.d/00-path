@@ -1,0 +1,5 @@
+typeset -U path
+
+path+=("${HOME}/bin")
+export ABS_SRC="${HOME}/src"
+export ABS_VCS="${ABS_SRC}/github.com/mistyfiky"
