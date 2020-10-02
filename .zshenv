@@ -1,5 +1,9 @@
 if [ -n "$(ls ~/.zshenv.d)" ]; then
     set -a
-    for f in ~/.zshenv.d/*; do \. "$f"; done
+    for f in ~/.zshenv.d/*; do
+        if [ -x "$f" ]; then
+            \. "$f"
+        fi
+    done
     set +a
 fi
