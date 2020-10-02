@@ -1,0 +1,1 @@
+[ command -v /usr/bin/kubectl &> /dev/null ] && source <(kubectl completion zsh) || true

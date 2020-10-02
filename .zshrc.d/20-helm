@@ -1,0 +1,1 @@
+[ command -v helm &> /dev/null ] && source <(helm completion zsh) || true

@@ -1,0 +1,1 @@
+[ command -v yarn &> /dev/null ] && path+=("${HOME}/.yarn/bin")
