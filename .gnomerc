@@ -58,7 +58,7 @@ gsettings set org.gnome.mutter center-new-windows true
 gsettings set org.gnome.desktop.wm.preferences audible-bell false
 
 # extensions
-gsettings set org.gnome.shell enabled-extensions "['ubuntu-appindicators@ubuntu.com', 'hibernate-status@dromi', 'sound-output-device-chooser@kgshank.net']"
+gsettings set org.gnome.shell enabled-extensions "['appindicatorsupport@rgcjonas.gmail.com', 'hibernate-status@dromi', 'sound-output-device-chooser@kgshank.net']"
 
 # custom
 [ -n "$(ls ~/.gnomerc.d)" ] && for f in ~/.gnomerc.d/*; do . "$f"; done || true
