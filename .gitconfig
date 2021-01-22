@@ -2,6 +2,8 @@
   excludesfile = ~/.gitignore_global
   editor = vim
   autocrlf = false
+[pull]
+	rebase = false
 [alias]
   a = add
   b = branch
