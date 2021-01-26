@@ -1,1 +1,3 @@
-[ command -v /usr/bin/kubectl &> /dev/null ] && source <(kubectl completion zsh) || true
+if command -v kubectl &> /dev/null; then
+    \. <(kubectl completion zsh)
+fi

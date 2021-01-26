@@ -1,1 +1,3 @@
-[ command -v helm &> /dev/null ] && source <(helm completion zsh) || true
+if command -v helm &> /dev/null; then
+    \. <(helm completion zsh)
+fi
