@@ -13,7 +13,10 @@ alias\
  dcdev='docker-compose -f docker-compose.yml -f docker-compose.dev.yml'\
  dcpro='docker-compose -f docker-compose.yml -f docker-compose.pro.yml'\
  g='git'\
+ k='kubectl'\
+ kd='kind'\
  m='make'\
+ mk='minikube'\
  p='php'\
  v='vim'\
 
