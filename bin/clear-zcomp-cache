@@ -1,0 +1,16 @@
+#!/usr/bin/env zsh
+
+if [ "-h" = "${1}" ] || [ "--help" = "${1}" ]
+then
+    >&2 cat <<EOT
+Usage: clear-zcomp-cache
+Clear the completions cache.
+
+  -h, --help display this help and exit
+EOT
+    exit
+fi
+
+rm -f ~/.zcompdump
+rm -rf ~/.zcompcache
+
