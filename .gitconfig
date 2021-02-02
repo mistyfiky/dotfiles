@@ -4,6 +4,8 @@
   autocrlf = false
 [pull]
 	rebase = false
+[init]
+	defaultBranch = master
 [alias]
   a = add
   b = branch
