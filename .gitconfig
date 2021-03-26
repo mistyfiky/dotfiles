@@ -15,7 +15,6 @@
   cm = commit -m
   ch = checkout
   chb = checkout -b
-  chm = checkout master
   cl = clone
   d = diff
   f = flow
