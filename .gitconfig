@@ -26,6 +26,7 @@
   p = pull
   pr = pull --rebase
   ph = push
+  phf = push --force
   phu = "!git push -u origin $(git rev-parse --abbrev-ref HEAD)"
   pht = push --tags
   r = reset

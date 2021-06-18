@@ -1,1 +1,3 @@
-[[ /usr/bin/helm ]] && source <(helm completion zsh)
+command -v helm >/dev/null\
+ && source <(helm completion zsh)
+
