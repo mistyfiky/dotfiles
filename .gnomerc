@@ -62,4 +62,4 @@ gsettings set org.gnome.desktop.wm.preferences audible-bell false
 gsettings set org.gnome.shell enabled-extensions "['appindicatorsupport@rgcjonas.gmail.com', 'hibernate-status@dromi', 'sound-output-device-chooser@kgshank.net']"
 
 # custom
-[ -n "$(ls ~/.gnomerc.d)" ] && for f in ~/.gnomerc.d/*; do . "$f"; done || true
+[ -z "$(ls ~/.gnomerc.d)" ] || for f in ~/.gnomerc.d/*; do [ ! -x "$f" ] || . "$f"; done
