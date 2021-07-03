@@ -17,7 +17,6 @@ gsettings set org.gnome.desktop.screensaver secondary-color '#000000'
 # favourite apps
 gsettings set org.gnome.shell favorite-apps "['firefox-esr.desktop', 'org.gnome.Terminal.desktop', 'org.gnome.Nautilus.desktop', 'atom.desktop', 'discord.desktop', 'jetbrains-toolbox.desktop', 'jetbrains-phpstorm.desktop', 'gimp.desktop', 'slack.desktop', 'spotify.desktop']"
 
-
 # screen lock
 gsettings set org.gnome.settings-daemon.plugins.media-keys screensaver "['<Alt><Super>l']"
 gsettings set org.gnome.desktop.notifications show-in-lock-screen false
