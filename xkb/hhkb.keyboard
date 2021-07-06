@@ -1,0 +1,5 @@
+Rules    =  "evdev"
+Model    =  "pc105"
+Layout   =  "pl,us"
+Variant  =  ","
+Options  =  "terminate:ctrl_alt_bksp"
