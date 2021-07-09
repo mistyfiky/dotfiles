@@ -1,6 +1,0 @@
-cooler="Cooler Master Technology Inc. MASTERKEYS PRO S"
-[ -z "$(xinput --list --id-only "$cooler" 2>/dev/null)" ] || setxkbmap -device "$(xinput --list --id-only "$cooler")" -option -config ~/xkb/cooler.keyboard
-yoga="AT Translated Set 2 keyboard"
-[ -z "$(xinput --list --id-only "$yoga" 2>/dev/null)" ] || setxkbmap -device "$(xinput --list --id-only "$yoga")" -option -config ~/xkb/yoga.keyboard
-hhkb="Topre Corporation HHKB Professional"
-[ -z "$(xinput --list --id-only "$hhkb" 2>/dev/null)" ] || setxkbmap -device "$(xinput --list --id-only "$hhkb")" -option -config ~/xkb/hhkb.keyboard

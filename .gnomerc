@@ -36,6 +36,7 @@ gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profi
 
 # keyboard layout
 gsettings set org.gnome.desktop.input-sources sources "[('xkb', 'pl')]"
+gsettings set org.gnome.desktop.input-sources xkb-options "['terminate:ctrl_alt_bksp', 'ctrl:nocaps', 'altwin:swap_alt_win', 'lv3:rwin_switch']"
 
 # power settings
 gsettings set org.gnome.settings-daemon.plugins.power power-button-action 'nothing'
@@ -60,5 +61,5 @@ gsettings set org.gnome.desktop.wm.preferences audible-bell false
 # extensions
 gsettings set org.gnome.shell enabled-extensions "['appindicatorsupport@rgcjonas.gmail.com', 'hibernate-status@dromi', 'sound-output-device-chooser@kgshank.net']"
 
-# custom
-[ -z "$(ls ~/.gnomerc.d)" ] || for f in ~/.gnomerc.d/*; do [ ! -x "$f" ] || . "$f"; done
+# local
+[ ! -x ~/.gnomerc.d/local ] || . ~/.gnomerc.d/local

@@ -1,5 +1,0 @@
-Rules    =  "evdev"
-Model    =  "pc105"
-Layout   =  "pl,us"
-Variant  =  ","
-Options  =  "ctrl:nocaps,altwin:swap_alt_win,lv3:switch,terminate:ctrl_alt_bksp"
